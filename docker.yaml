@@ -50,6 +50,7 @@ provision:
     # NOTE: you may remove the lines below, if you prefer to use rootful docker, not rootless
     systemctl disable --now docker
     apt-get install -y uidmap dbus-user-session
+    echo nonempty >> /etc/fuse.conf
 - mode: user
   script: |
     #!/bin/bash
